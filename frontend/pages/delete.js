@@ -11,7 +11,7 @@ const Del = () => {
   const router = useRouter()
   useEffect(() => {
     axios
-      .get('http://localhost:5000/read')
+      .get('https://merncrud1414.herokuapp.com/read')
       .then((res) => {
         console.log(res.data)
         setNames(res.data)
@@ -42,7 +42,7 @@ const Del = () => {
               variant='primary'
               onClick={async () => {
                 await axios.post(
-                  'http://localhost:5000/delete',
+                  'https://merncrud1414.herokuapp.com/delete',
                   {
                     id: name._id,
                   },

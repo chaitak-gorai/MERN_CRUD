@@ -15,7 +15,7 @@ const create = () => {
     }
     e.preventDefault()
     axios.post(
-      'http://localhost:5000/create',
+      'https://merncrud1414.herokuapp.com/create',
       {
         name: nameRef.current.value,
       },

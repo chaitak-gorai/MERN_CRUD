@@ -10,7 +10,7 @@ const update = () => {
   const router = useRouter()
   useEffect(() => {
     axios
-      .get('http://localhost:5000/read')
+      .get('https://merncrud1414.herokuapp.com/read')
       .then((res) => {
         console.log(res.data)
         setNames(res.data)
@@ -41,7 +41,7 @@ const update = () => {
               variant='primary'
               onClick={async () => {
                 await axios.post(
-                  'http://localhost:5000/update',
+                  'https://merncrud1414.herokuapp.com/update',
                   {
                     id: name._id,
                     name: nameRef.current.value,

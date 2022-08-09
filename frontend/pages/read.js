@@ -7,7 +7,7 @@ const read = () => {
   const [names, setNames] = React.useState([])
   useEffect(() => {
     axios
-      .get('http://localhost:5000/read')
+      .get('https://merncrud1414.herokuapp.com/read')
       .then((res) => {
         console.log(res.data)
         setNames(res.data)
