@@ -23,7 +23,6 @@ const create = () => {
       },
       config
     )
-    router.reload(window.location.pathname)
   }
   return (
     <Container
