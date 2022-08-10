@@ -8,12 +8,14 @@ const create = () => {
   const nameRef = useRef()
   const router = useRouter()
   const submitHandler = (e) => {
+    e.preventDefault()
+    console.log(nameRef.current.value)
     const config = {
       headers: {
         'Content-Type': 'application/json',
       },
     }
-    e.preventDefault()
+
     axios.post(
       'https://merncrud1414.herokuapp.com/create',
       {
@@ -21,8 +23,6 @@ const create = () => {
       },
       config
     )
-    router.reload(window.location.pathname)
-    router.push('/read')
   }
   return (
     <Container

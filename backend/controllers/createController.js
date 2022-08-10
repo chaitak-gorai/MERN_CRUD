@@ -3,7 +3,7 @@ import Name from '../models/nameModel.js'
 
 const createController = async (req, res) => {
   const { name } = req.body
-
+  console.log(name, 'name')
   const userExists = await Name.findOne({ name })
   if (userExists) {
     res.status(400)
